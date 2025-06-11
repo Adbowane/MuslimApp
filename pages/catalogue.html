@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MShop - Catalogue</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">MShop</div>
+            <div class="nav-links">
+                <a href="../index.html">Accueil</a>
+                <a href="catalogue.html">Catalogue</a>
+                <a href="about.html">À propos</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="search-cart">
+                <input type="text" placeholder="Rechercher..." id="searchInput">
+                <div class="cart-icon" onclick="window.location.href='panier.html'">
+                    <span>🛒</span>
+                    <span class="cart-count" id="cartCount">0</span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Catalogue -->
+    <section class="catalogue">
+        <!-- Filters -->
+        <aside class="filters">
+            <h3>Filtres</h3>
+            <div class="filter-group">
+                <label for="category">Catégorie</label>
+                <select id="category">
+                    <option value="">Toutes</option>
+                    <option value="hijab">Hijabs</option>
+                    <option value="sous-hijab">Sous-Hijabs</option>
+                    <option value="epingle">Épingles</option>
+                    <option value="accessoire">Accessoires</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="price">Prix (0 - 50€)</label>
+                <input type="range" id="price" min="0" max="50" value="50">
+                <span id="priceValue">50€</span>
+            </div>
+            <div class="filter-group">
+                <label>Couleur</label>
+                <label><input type="checkbox" class="color" value="noir"> Noir</label>
+                <label><input type="checkbox" class="color" value="blanc"> Blanc</label>
+                <label><input type="checkbox" class="color" value="beige"> Beige</label>
+                <label><input type="checkbox" class="color" value="bleu"> Bleu</label>
+            </div>
+        </aside>
+
+        <!-- Products -->
+        <div class="products-section">
+            <div class="products-header">
+                <h2>Nos Produits</h2>
+                <select id="sort">
+                    <option value="price-asc">Prix : Croissant</option>
+                    <option value="price-desc">Prix : Décroissant</option>
+                    <option value="newest">Nouveautés</option>
+                </select>
+            </div>
+            <div class="product-grid" id="productGrid">
+                <!-- Products will be populated by JavaScript -->
+            </div>
+            <div class="pagination">
+                <button id="prevPage" disabled>Précédent</button>
+                <button id="nextPage">Suivant</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="../assets/js/products.js"></script>
+    <script src="../assets/js/catalogue.js"></script>
+</body>
+</html>

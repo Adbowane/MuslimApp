@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MShop - Hijabs & Accessoires</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">MShop</div>
+            <div class="nav-links">
+                <a href="index.html">Accueil</a>
+                <a href="pages/catalogue.html">Catalogue</a>
+                <a href="pages/about.html">À propos</a>
+                <a href="pages/contact.html">Contact</a>
+            </div>
+            <div class="search-cart">
+                <input type="text" placeholder="Rechercher..." id="searchInput">
+                <div class="cart-icon" onclick="window.location.href='pages/panier.html'">
+                    <span>🛒</span>
+                    <span class="cart-count" id="cartCount">0</span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Carousel -->
+    <section class="carousel">
+        <div class="carousel-images" id="carouselImages">
+            <img src="assets/images/banners/promo-1.jpg" alt="Promotion 1">
+            <img src="assets/images/banners/promo-2.jpg" alt="Promotion 2">
+            <img src="assets/images/banners/promo-3.jpg" alt="Promotion 3">
+        </div>
+        <button class="carousel-btn prev-btn" onclick="moveCarousel(-1)">&#10094;</button>
+        <button class="carousel-btn next-btn" onclick="moveCarousel(1)">&#10095;</button>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured-products">
+        <h2>Nos Produits Phares</h2>
+        <div class="product-grid" id="productGrid">
+            <!-- Products will be populated by JavaScript -->
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="categories">
+        <h2>Explorez Nos Catégories</h2>
+        <div class="category-links">
+            <a href="pages/catalogue.html?category=hijab">Hijabs</a>
+            <a href="pages/catalogue.html?category=sous-hijab">Sous-Hijabs</a>
+            <a href="pages/catalogue.html?category=epingle">Épingles</a>
+            <a href="pages/catalogue.html?category=accessoire">Accessoires</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: contact@mshop.fr</p>
+                <p>Téléphone: +33 1 23 45 67 89</p>
+                <p>Adresse: 123 Rue Modeste, 75000 Paris</p>
+            </div>
+            <div class="footer-section">
+                <h3>Liens Utiles</h3>
+                <a href="#mentions">Mentions Légales</a>
+                <a href="#cgv">Conditions Générales de Vente</a>
+                <a href="#faq">FAQ</a>
+            </div>
+            <div class="footer-section">
+                <h3>Suivez-nous</h3>
+                <div class="social-links">
+                    <a href="#">📘</a>
+                    <a href="#">📸</a>
+                    <a href="#">🐦</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/products.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

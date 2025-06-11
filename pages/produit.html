@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MShop - Détail Produit</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">MShop</div>
+            <div class="nav-links">
+                <a href="../index.html">Accueil</a>
+                <a href="catalogue.html">Catalogue</a>
+                <a href="about.html">À propos</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="search-cart">
+                <input type="text" placeholder="Rechercher..." id="searchInput">
+                <div class="cart-icon" onclick="window.location.href='panier.html'">
+                    <span>🛒</span>
+                    <span class="cart-count" id="cartCount">0</span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Product Detail -->
+    <section class="product-detail">
+        <div class="product-image">
+            <img id="productImage" src="../assets/images/products/hijab-1.jpg" alt="Produit">
+        </div>
+        <div class="product-info">
+            <h1 id="productName">Hijab Chiffon Premium</h1>
+            <p class="price" id="productPrice">19.99 €</p>
+            <p class="description" id="productDescription">
+                Ce hijab en chiffon premium offre une texture légère et fluide, idéale pour un port quotidien. Conçu pour allier élégance et confort, il est disponible en plusieurs couleurs et tailles pour s'adapter à tous les styles.
+            </p>
+            <div class="options">
+                <label for="color">Couleur</label>
+                <select id="color">
+                    <option value="noir">Noir</option>
+                    <option value="blanc">Blanc</option>
+                    <option value="beige">Beige</option>
+                    <option value="bleu">Bleu</option>
+                </select>
+                <label for="size">Taille</label>
+                <select id="size">
+                    <option value="standard">Standard</option>
+                    <option value="long">Long</option>
+                </select>
+            </div>
+            <button class="add-to-cart" onclick="addToCart()">Ajouter au panier</button>
+        </div>
+    </section>
+
+    <!-- Similar Products -->
+    <section class="similar-products">
+        <h2>Produits Similaires</h2>
+        <div class="product-grid" id="similarProducts">
+            <!-- Similar products will be populated by JavaScript -->
+        </div>
+    </section>
+
+    <script src="../assets/js/products.js"></script>
+    <script src="../assets/js/produit.js"></script>
+</body>
+</html>

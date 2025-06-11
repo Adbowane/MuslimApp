@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MShop - Panier</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">MShop</div>
+            <div class="nav-links">
+                <a href="../index.html">Accueil</a>
+                <a href="catalogue.html">Catalogue</a>
+                <a href="about.html">À propos</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="search-cart">
+                <input type="text" placeholder="Rechercher..." id="searchInput">
+                <div class="cart-icon" onclick="window.location.href='panier.html'">
+                    <span>🛒</span>
+                    <span class="cart-count" id="cartCount">0</span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Cart Section -->
+    <section class="cart-section">
+        <h2>Votre Panier</h2>
+        <table class="cart-table">
+            <thead>
+                <tr>
+                    <th>Produit</th>
+                    <th>Nom</th>
+                    <th>Quantité</th>
+                    <th>Prix Unitaire</th>
+                    <th>Total</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="cartTableBody">
+                <!-- Cart items will be populated by JavaScript -->
+            </tbody>
+        </table>
+        <div class="cart-summary">
+            <h3>Résumé</h3>
+            <div class="promo-code">
+                <input type="text" id="promoCode" placeholder="Code promo">
+                <button onclick="applyPromoCode()">Appliquer</button>
+            </div>
+            <p class="total" id="cartTotal">Total: 0.00 €</p>
+            <button class="checkout-btn" onclick="simulateCheckout()">Valider la commande</button>
+        </div>
+    </section>
+
+    <script src="../assets/js/products.js"></script>
+    <script src="../assets/js/panier.js"></script>
+</body>
+</html>
